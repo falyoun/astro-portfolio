@@ -7,5 +7,5 @@ console.log({ env: process.env.NODE_ENV })
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  base: '/astro-portfolio'
+  base: '/astro-portfolio',
 });
