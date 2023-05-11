@@ -1,13 +1,11 @@
 ---
 // @ts-nocheck
 import Layout from "../layouts/Layout.astro";
+import PDFViewer from "tailwind-pdf-viewer/dist";
+import "tailwind-pdf-viewer/dist/style.css";
+
+const pdfURL = 'https://raw.githubusercontent.com/KhoiUna/tailwind-pdf-viewer/main/src/assets/resume.pdf'
 ---
-
-
 <Layout title="Abdulrahman Falyoun's Portfolio">
-    <object data="https://falyoun.github.io/astro-portfolio/resume.pdf" type="application/pdf" width="100%" height="800px"> 
-        <p>It appears you don't have a PDF plugin for this browser.
-         No biggie... you can <a href="https://falyoun.github.io/astro-portfolio/resume.pdf">click here to
-        download the PDF file.</a></p>  
-      </object>
+  <PDFViewer client:load pdfURL={pdfURL} />
 </Layout>
